@@ -14,9 +14,9 @@ const config = {
 
 const handleEvent = async ({ event, api }) => {
 		let KEY = [
-				"hello",
-				"hi",
-				"hello po",
+				"Hello",
+				"Hi",
+				"Hello po",
 				// Add other keywords as needed
 		];
 
@@ -31,7 +31,7 @@ const handleEvent = async ({ event, api }) => {
 				"Tell me about your day",
 				"Have you watched any good movies lately?",
 				"What's your favorite hobby?",
-				"Do you believe in aliens?", "I'm updating my commands, What are you doing?", "Can you interact with my admin (Cliff Vincent)", "You're so beautiful/handsome binibini/ginoo", "I love you mwa */kiss your forehead.", "Are you bored? talk to my admin", "How are you my dear", "Sana okay kalang.", "Are you ok?", "Be safe, Mwaa.", "Wag magpapagutom mahal.", `Use ${prefix}help to see my commands. `];
+				"Do you believe in aliens?", "I'm updating my commands, What are you doing?", "Can you interact with my admin (Vincent Magtolis)", "You're so beautiful/handsome binibini/ginoo", "I love you mwa */kiss your forehead.", "Are you bored? talk to my admin", "How are you my dear", "Sana okay kalang.", "Are you ok?", "Be safe, Mwaa.", "Wag magpapagutom mahal.", `Use ${prefix}help to see my commands. `];
 		let juswa1 = juswa[Math.floor(Math.random() * juswa.length)];
 
 		let moment = require("moment-timezone");

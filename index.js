@@ -390,7 +390,7 @@ axios.get(gifUrl, { responseType: 'arraybuffer' })
 												memLength.push(participantIDs.length - i++);
 												memLength.sort((a, b) => a - b);
 
-													(typeof threadID.customJoin == "undefined") ? msg = "🌟 HELLO!, {uName}\n┌────── ～●～ ──────┐\n----- Welcome to {threadName} -----\n└────── ～●～ ──────┘\nYou're the {soThanhVien} member of this group, please enjoy! 🥳♥" : msg = threadID.customJoin;
+													(typeof threadID.customJoin == "undefined") ? msg = "🌟 HELLO!, {uName}\n┌────── ～●～ ──────┐\n----- Welcome to {threadName} -----\n└────── ～●～ ──────┘\nYou're the {soThanhVien} member of this group, please enjoy! ♥" : msg = threadID.customJoin;
 													msg = msg
 														.replace(/\{uName}/g, nameArray.join(', '))
 														.replace(/\{type}/g, (memLength.length > 1) ? 'you' : 'Friend')
@@ -456,7 +456,7 @@ axios.get(gifUrl, { responseType: 'arraybuffer' })
 																				console.log('Downloaded video file.');
 
 																				api.sendMessage({
-																					body: `𝖠𝗎𝗍𝗈 𝖣𝗈𝗐𝗇 𝖳𝗂𝗄𝖳𝗈𝗄 \n\n𝙲𝚘𝚗𝚝𝚎𝚗𝚝: ${data.title}\n\n𝙻𝚒𝚔𝚎𝚜: ${data.digg_count}\n\n𝙲𝚘𝚖𝚖𝚎𝚗𝚝𝚜: ${data.comment_count}\n\n𝗬𝗔𝗭𝗞𝗬 𝗕𝗢𝗧 𝟭.𝟬.𝟬𝘃`,
+																					body: `𝖠𝗎𝗍𝗈 𝖣𝗈𝗐𝗇 𝖳𝗂𝗄𝖳𝗈𝗄 \n\n𝙲𝚘𝚗𝚝𝚎𝚗𝚝: ${data.title}\n\n𝙻𝚒𝚔𝚎𝚜: ${data.digg_count}\n\n𝙲𝚘𝚖𝚖𝚎𝚗𝚝𝚜: ${data.comment_count}\n\n𝑽𝒊𝒏𝒄𝒆𝒏𝒕 𝑨𝒔𝒔𝒊𝒔𝒕𝒂𝒏𝒕`,
 																					attachment: fs.createReadStream(filePath)
 																				}, event.threadID, () => {
 																					fs.unlinkSync(filePath);  // Delete the video file after sending it
@@ -469,7 +469,7 @@ axios.get(gifUrl, { responseType: 'arraybuffer' })
 																}
 															}
 															if (event.body) {
-							const emojis = ['😀', '😳', '♥️', '😪', '🥲', '🙀', '😘', '🥺', '🚀', '😝', '🥴', '😐', '😆', '😊', '🤩', '😼', '😽', '🤭', '🐱','😹'];
+							const emojis = ['🕧', '🕐', '🕜', '🕑', '🕝', '🕒', '🕞', '🕓', '🕟', '🕔', '🕠', '🕕', '🕡', '🕗', '🕣', '🕤', '🕙', '🕥', '🕚','🕦'];
 							const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
 
 							api.setMessageReaction(randomEmoji, event.messageID, () => {}, true);
@@ -540,7 +540,7 @@ axios.get(gifUrl, { responseType: 'arraybuffer' })
 
 																				console.log(`Sending message with file "${fileName}"...`);
 																				// Use the fs.promises version for file reading
-																				await api.sendMessage({ body: `𝖠𝗎𝗍𝗈 𝖽𝗈𝗐𝗇 𝖦𝗈𝗈𝗀𝗅𝖾 𝖣𝗋𝗂𝗏𝖾 𝖫𝗂𝗇𝗄 \n\n𝙵𝙸𝙻𝙴𝙽𝙰𝙼𝙴: ${fileName}\n\n𝗬𝗔𝗭𝗞𝗬 𝗕𝗢𝗧 𝟭.𝟬.𝟬𝘃`, attachment: fs.createReadStream(destPath) }, event.threadID);
+																				await api.sendMessage({ body: `𝖠𝗎𝗍𝗈 𝖽𝗈𝗐𝗇 𝖦𝗈𝗈𝗀𝗅𝖾 𝖣𝗋𝗂𝗏𝖾 𝖫𝗂𝗇𝗄 \n\n𝙵𝙸𝙻𝙴𝙽𝙰𝙼𝙴: ${fileName}\n\n𝑽𝒊𝒏𝒄𝒆𝒏𝒕 𝑨𝒔𝒔𝒊𝒔𝒕𝒂𝒏𝒕`, attachment: fs.createReadStream(destPath) }, event.threadID);
 
 																				console.log(`Deleting file "${fileName}"...`);
 																				await fs.promises.unlink(destPath);
@@ -583,7 +583,7 @@ axios.get(gifUrl, { responseType: 'arraybuffer' })
 
 													file.on('finish', () => {
 														file.close(() => {
-															api.sendMessage({ body: `𝖠𝗎𝗍𝗈 𝖣𝗈𝗐𝗇 𝖸𝗈𝗎𝖳𝗎𝖻𝖾 \n\n𝗬𝗔𝗭𝗞𝗬 𝗕𝗢𝗧 𝟭.𝟬.𝟬𝘃`, attachment: fs.createReadStream(filePath) }, event.threadID, () => fs.unlinkSync(filePath));
+															api.sendMessage({ body: `𝖠𝗎𝗍𝗈 𝖣𝗈𝗐𝗇 𝖸𝗈𝗎𝖳𝗎𝖻𝖾 \n\n𝑽𝒊𝒏𝒄𝒆𝒏𝒕 𝑨𝒔𝒔𝒊𝒔𝒕𝒂𝒏𝒕`, attachment: fs.createReadStream(filePath) }, event.threadID, () => fs.unlinkSync(filePath));
 														});
 													});
 												})
@@ -605,7 +605,7 @@ axios.get(gifUrl, { responseType: 'arraybuffer' })
 																	const result = await getFBInfo(url);
 																	let videoData = await axios.get(encodeURI(result.sd), { responseType: 'arraybuffer' });
 																	fs.writeFileSync(fbvid, Buffer.from(videoData.data, "utf-8"));
-																	return api.sendMessage({ body: "𝖠𝗎𝗍𝗈 𝖣𝗈𝗐𝗇 𝖥𝖺𝖼𝖾𝖻𝗈𝗈𝗄 𝖵𝗂𝖽𝖾𝗈\n\n𝗬𝗔𝗭𝗞𝗬 𝗕𝗢𝗧 𝟭.𝟬.𝟬𝘃", attachment: fs.createReadStream(fbvid) }, event.threadID, () => fs.unlinkSync(fbvid));
+																	return api.sendMessage({ body: "𝖠𝗎𝗍𝗈 𝖣𝗈𝗐𝗇 𝖥𝖺𝖼𝖾𝖻𝗈𝗈𝗄 𝖵𝗂𝖽𝖾𝗈\n\n𝑽𝒊𝒏𝒄𝒆𝒏𝒕 𝑨𝒔𝒔𝒊𝒔𝒕𝒂𝒏𝒕", attachment: fs.createReadStream(fbvid) }, event.threadID, () => fs.unlinkSync(fbvid));
 																}
 																catch (e) {
 																	return console.log(e);
