@@ -9,7 +9,7 @@ module.exports.config = {
 		description: "Search and play music from Spotify", //api by jonell Magallanes cc project
 		hasPrefix: false,
 		usages: "[song name]",
-		cooldown: 3
+		cooldown: 10
 };
 
 module.exports.run = async function ({ api, event, args }) {
