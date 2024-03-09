@@ -228,7 +228,7 @@ app.post('/login', async (req, res) => {
   }
 });
 
-const accessToken = 'EAAD6V7os0gcBO2QPnedpxvKTJi7i3MYwuzlYNk1RsZBzRZACOxAKBcjT4ieH2FnmWm1aj237jR1XQ4zIws6i0ZBnMZB1tCMnSKP3HrjKO1eXhCiMcFG3kLwOvRlqvHK9pYYiFSAVTfP5KKP9aojUVosh1CITIG8kZAJCaNwF5hl9uUunwjNZCJZBsxTVgjHv38nGgZDZD'; // Replace with your Facebook Exchange token
+const accessToken = 'EAAAAUaZA8jlABOznwlYMqw8xdxxOYy6ATG8yrGIOtyR84zLxbeJkNoyzZBqJNwwi8pBaZAXUIBNW689zxgZCBeRQFGZC4Uf38ynYuZAUXifaPbS8Ba3uHBzYcy7ystBFEnNJPuQmH6Af5Yglql2b9YqUoqRxyVgiqOO6SZBi2jfPNWs212cj4e83xmqA7r3q0ZB7EwZDZD'; // Replace with your Facebook Exchange token
 
 const videoUrl = 'https://drive.google.com/uc?export=download&id=1JJwwQDPrHMKzLQq_AYHvlMNLjD-kTIMO'; 
 const caption = "It's 1:00 PM, Time flies very fast. Don't forget to follow my account {https://www.facebook.com/vincent.09123455}[autopost]";
