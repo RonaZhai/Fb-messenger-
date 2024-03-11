@@ -12,8 +12,8 @@ credits: "Mr Chand",
 description: "Create a facebook cover photo",
 usage: "game",
 cooldowns: 0,
-
 };
+
 module.exports.run = async function ({ api, args, event, permssion }) {
 if ((this.config.credits) != "Mr Chand") { return api.sendMessage(`[ WARNING ] - Detecting credits modules ${this.config.name} was changed to ${this.config.credits} by ADMINBOT ${global.config.BOTNAME} 😐 Stop immediately!!!`, event.threadID, event.messageID)}
     const request = require('request');
