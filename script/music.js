@@ -2,7 +2,7 @@ const path = require('path');
 module.exports.config = {
 	name: "music",
 	version: "1.0.0",
-	credits: "cliff",
+	credits: "Zen",
 	role: 0,
 	aliases: ['play'],
 	cooldown: 0,
@@ -19,7 +19,7 @@ module.exports.run = async function({
 	const yts = require("yt-search");
 	const musicName = args.join(' ');
 	if (!musicName) {
-		api.sendMessage(`To get started, type music and the title of the song you want.`, event.threadID, event.messageID);
+		api.sendMessage(`𝙏𝙤 𝙜𝙚𝙩 𝙨𝙩𝙖𝙧𝙩𝙚𝙙, 𝙩𝙮𝙥𝙚 𝙢𝙪𝙨𝙞𝙘 𝙖𝙣𝙙 𝙩𝙝𝙚 𝙩𝙞𝙩𝙡𝙚 𝙤𝙛 𝙩𝙝𝙚 𝙨𝙤𝙣𝙜 𝙮𝙤𝙪 𝙬𝙖𝙣𝙩.`, event.threadID, event.messageID);
 		return;
 	}
 	try {
@@ -42,7 +42,7 @@ module.exports.run = async function({
 			stream.on('end', () => {
 				if (fs.statSync(filePath).size > 26214400) {
 					fs.unlinkSync(filePath);
-					return api.sendMessage('The file could not be sent because it is larger than 25MB.', event.threadID);
+					return api.sendMessage('𝗧𝗵𝗲 𝗳𝗶𝗹𝗲 𝗰𝗼𝘂𝗹𝗱 𝗻𝗼𝘁 𝗯𝗲 𝘀𝗲𝗻𝘁 𝗯𝗲𝗰𝗮𝘂𝘀𝗲 𝗶𝘁 𝗶𝘀 𝗹𝗮𝗿𝗴𝗲𝗿 𝘁𝗵𝗮𝗻 25𝗠𝗕.', event.threadID);
 				}
 				const message = {
 					body: `${music.title}`,
@@ -54,6 +54,6 @@ module.exports.run = async function({
 			});
 		}
 	} catch (error) {
-		api.sendMessage('An error occurred while processing your request.', event.threadID, event.messageID);
+		api.sendMessage('𝗔𝗻 𝗲𝗿𝗿𝗼𝗿 𝗼𝗰𝗰𝘂𝗿𝗿𝗲𝗱 𝘄𝗵𝗶𝗹𝗲 𝗽𝗿𝗼𝗰𝗲𝘀𝘀𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝗿𝗲𝗾𝘂𝗲𝘀𝘁.', event.threadID, event.messageID);
 	}
 };
