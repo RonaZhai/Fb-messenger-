@@ -20,7 +20,7 @@ module.exports.run = async function({ api, args, event, admin }) {
 	var a = function(a) {
 		api.sendMessage(a, event.threadID);
 	};
-	a("ginalit moko putanginamo ka walang iyakan ah bwakananginaka eh");
+	a("ginalit moko putanginamo ka walang iyakan ah ampangit mopa naman");
 	setTimeout(() => {
 		a({
 			body:
@@ -70,7 +70,7 @@ module.exports.run = async function({ api, args, event, admin }) {
 		a({ body: "tanginaka ginigigil mo bot ko sarap mong i sidekick with recall putanginaka" });
 	}, 39000);
 	setTimeout(() => {
-		a({ body: "gulat ka no ? HAHAHAHA tanga ka kase d moto alam " });
+		a({ body: "puro tiktok myday, bobo naman sa acads" });
 	}, 40000);
 	setTimeout(() => {
 		a({ body: "nagrereply ka palang minumura na kita tanginamo" });
@@ -112,7 +112,7 @@ module.exports.run = async function({ api, args, event, admin }) {
 		a({ body: "inutusan ako na dapat nakakadepressed at nakakatraumatize daw" });
 	}, 145000);
 	setTimeout(() => {
-		a({ body: "kokotong kotongan lang kita rito e" });
+		a({ body: "kung ang animal ay nasa gubat bakit ka nandito hayop" });
 	}, 155000);
 	setTimeout(() => {
 		a({ body: "bye kinginamo pangit" });
