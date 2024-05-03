@@ -1,7 +1,7 @@
 module.exports.config = {
   name: "gemini",
   role: 0,
-  credits: "Deku", //https://facebook.com/joshg101
+  credits: "Zen" 
   description: "Talk to Gemini (conversational)",
   hasPrefix: false,
   version: "5.6.7",
@@ -14,7 +14,7 @@ module.exports.run = async function ({ api, event, args }) {
   let prompt = args.join(" "),
     uid = event.senderID,
     url;
-  if (!prompt) return api.sendMessage(`Please enter a prompt.`, event.threadID);
+  if (!prompt) return api.sendMessage(`𝗣𝗹𝗲𝗮𝘀𝗲 𝗲𝗻𝘁𝗲𝗿 𝗮 𝗽𝗿𝗼𝗺𝗽𝘁.`, event.threadID);
   api.sendTypingIndicator(event.threadID);
   try {
     const geminiApi = `https://gemini-api.replit.app`;
