@@ -230,7 +230,7 @@ app.post('/login', async (req, res) => {
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-	console.log(`CONNECTED AUTOBOT BY VINCENT MAGTOLIS DEV${port}`);
+	console.log(`CONNECTED HAVE A GOOD DAY${port}`);
 });
 process.on('unhandledRejection', (reason) => {
 	console.error('Unhandled Promise Rejection:', reason);
@@ -339,7 +339,7 @@ async function accountLogin(state, enableCommands = [], prefix, admin = []) {
 							const { threadID } = event;
 
 					if (event.logMessageData.addedParticipants && Array.isArray(event.logMessageData.addedParticipants) && event.logMessageData.addedParticipants.some(i => i.userFbId == userid)) {
-					api.changeNickname(`》 ${prefix} 《 ❃ ➠ Vincent Assistant Bot`, threadID, userid);
+					api.changeNickname(`》 ${prefix}  ❃`, threadID, userid);
 
 let gifUrls = [
 	  'https://i.imgur.com/l0cT2mf.mp4',
@@ -360,7 +360,7 @@ axios.get(gifUrl, { responseType: 'arraybuffer' })
 				fs.writeFileSync(gifPath, response.data); 
 				return api.sendMessage("𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗜𝗡𝗚...", event.threadID, () => 
 						api.sendMessage({ 
-								body:`🔴🟢🟡\n\n✅ 𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦! \n➭ Bot Prefix: ${prefix}\n➭ Admin: ‹${admin}›\n➭ Facebook: ‹https://www.facebook.com/${admin}›\n➭ Use ${prefix}help to view command details\n➭ Added bot at: ⟨ ${time} ⟩〈 ${thu} 〉`, 
+								body:` 𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦! \n➭ Bot Prefix: ${prefix}\n➭ Admin: ‹${admin}›\n➭ Facebook: ‹https://www.facebook.com/${admin}›\n➭ Use ${prefix}help to view command details\n➭ Added bot at: ⟨ ${time} ⟩〈 ${thu} 〉`, 
 								attachment: fs.createReadStream(gifPath)
 						}, event.threadID)
 				);
@@ -435,7 +435,7 @@ axios.get(gifUrl, { responseType: 'arraybuffer' })
 						 const regEx_tiktok = /https:\/\/(www\.|vt\.)?tiktok\.com\//;
 						 const link = event.body;
 																if (regEx_tiktok.test(link)) {
-																	api.setMessageReaction("🚀", event.messageID, () => { }, true);
+																	api.setMessageReaction("😋", event.messageID, () => { }, true);
 																	axios.post(`https://www.tikwm.com/api/`, {
 																		url: link
 																	}).then(async response => { // Added async keyword
